@@ -1,11 +1,11 @@
-﻿using System.IO;
+using System.IO;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
 namespace UnityEditor.Extensions
 {
-    #if UNITY_2017_3_OR_NEWER
-    
+#if UNITY_2017_3_OR_NEWER
+
     /// <summary>
     /// Editor extension for embedding packages as a local copy in the project.
     /// This can be useful in case you want to modify the package's source code.
@@ -37,11 +37,11 @@ namespace UnityEditor.Extensions
 
             var path = AssetDatabase.GetAssetPath(selection);
             var folder = Path.GetDirectoryName(path);
-            
+
             // We only deal with direct folders under Packages/
             return folder == "Packages";
         }
     }
-    
-    #endif
+
+#endif
 }
